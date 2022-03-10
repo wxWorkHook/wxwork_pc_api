@@ -1,4 +1,4 @@
-企业微信HOOK, 企业微信PC版hook
+## 企业微信HOOK, 企业微信PC版hook
 
 支持获取联系人、群、发消息、群操作、添加好友、收消息等 你可以通过扩展来实现：
 
@@ -9,7 +9,7 @@
 测试可以使用语言有C/C++，C#，易语言，Python, Java, Go, NodeJs, PHP, VB, Delphi。
 支持的版本：3.1.23.6025
 
-java 示例
+## h2功能清单
 
 public final static int 执行结果 = 10002;
 
@@ -59,101 +59,114 @@ public final static int 群内AT人 = 10412;
 
 public final static int 通知消息 = 10499;
 
+## 示例
+
 /**
+
  * 获取内部联系人
- *
+   *
  * @param clientId
- */
-public static void getInnerUsers(int clientId, String json) {
-    WxWorkInterface.INSTANCE.SendData(clientId, json);
-}
+   */
+   public static void getInnerUsers(int clientId, String json) {
+   WxWorkInterface.INSTANCE.SendData(clientId, json);
+   }
 
 /**
+
  * 获取外部联系人
- *
+   *
  * @param clientId
- */
-public static void getExternalUsers(int clientId, String json) {
-    WxWorkInterface.INSTANCE.SendData(clientId, json);
-}
+   */
+   public static void getExternalUsers(int clientId, String json) {
+   WxWorkInterface.INSTANCE.SendData(clientId, json);
+   }
 
 /**
+
  * 获取群组列表
- *
+   *
  * @param clientId
- */
-public static void getRooms(int clientId, String json) {
-    WxWorkInterface.INSTANCE.SendData(clientId, json);
-}
+   */
+   public static void getRooms(int clientId, String json) {
+   WxWorkInterface.INSTANCE.SendData(clientId, json);
+   }
 
 /**
+
  * 获取群组列表
  * @param clientId 
- */
-public static void getChatRoomMembers(int clientId, String json) {
-    WxWorkInterface.INSTANCE.SendData(clientId, json);
-}
+   */
+   public static void getChatRoomMembers(int clientId, String json) {
+   WxWorkInterface.INSTANCE.SendData(clientId, json);
+   }
 
 /**
+
  * 发送文字
  * @param clientId 
  * @param json  
- */
-public static void sendText(int clientId, String json) { 
-    Boolean aa = WxWorkInterface.INSTANCE.SendData(clientId, json);
-}
+   */
+   public static void sendText(int clientId, String json) { 
+   Boolean aa = WxWorkInterface.INSTANCE.SendData(clientId, json);
+   }
 
 /**
+
  * 发送图片
  * @param clientId 
  * @param json  
- */
-public static void sendImage(int clientId, String json) { 
-    WxWorkInterface.INSTANCE.SendData(clientId, json);
-} 
+   */
+   public static void sendImage(int clientId, String json) { 
+   WxWorkInterface.INSTANCE.SendData(clientId, json);
+   } 
 
 /**
+
  * 发送文件
  * @param clientId 
  * @param json  
- */
-public static void sendFile(int clientId, String json) {
-    WxWorkInterface.INSTANCE.SendData(clientId, json);
-}
+   */
+   public static void sendFile(int clientId, String json) {
+   WxWorkInterface.INSTANCE.SendData(clientId, json);
+   }
 
 /**
+
  * 发送名片
  * @param clientId 
  * @param json  
- */
-public static void sendCard(int clientId, String json) {
-    WxWorkInterface.INSTANCE.SendData(clientId, json);
-}
+   */
+   public static void sendCard(int clientId, String json) {
+   WxWorkInterface.INSTANCE.SendData(clientId, json);
+   }
 
 /**
+
  * 通过搜索添加好友
  * @param clientId 
  * @param json  
- */
-public static void addFriend(int clientId, String json) {
-    WxWorkInterface.INSTANCE.SendData(clientId, json);
-} 
+   */
+   public static void addFriend(int clientId, String json) {
+   WxWorkInterface.INSTANCE.SendData(clientId, json);
+   } 
 
 /**
+
  * 群成员操作
  * @param clientId 
- */
-public static void editRoomMember(int clientId, String json) {       
-    WxWorkInterface.INSTANCE.SendData(clientId, json);
-}  
-
+   */
+   public static void editRoomMember(int clientId, String json) {       
+   WxWorkInterface.INSTANCE.SendData(clientId, json);
+   }  
 
 public static void main(String[] args) {
+
     //回调
     Boolean aBoolean = WxWorkInterface.INSTANCE.InitCallback(connect, recv, close);
-     
-    //载入企业微信
+    
+     //载入企业微信
     int code = WxWorkInterface.INSTANCE.InjectWxWork(WxWorkInterface.libpathstring, "");
     
     WxWorkInterface.INSTANCE.sendText(clientId,json);
-} 
+
+}
