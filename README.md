@@ -7,7 +7,7 @@
 聊天机器人
 通过企业微信远程控制你的设备
 测试可以使用语言有C/C++，C#，易语言，Python, Java, Go, NodeJs, PHP, VB, Delphi。
-支持的版本：3.1.23.6025
+支持的版本：3.1.22
 
 ## h2功能清单
 
@@ -61,112 +61,62 @@ public final static int 通知消息 = 10499;
 
 ## 示例
 
-/**
+    /**
+     * 发送图片
+     * @param iClientId
+     * @param conversation_id 接收者的会话ID
+     * @param file 文件路径
+     */
+    public static void sendImage(int iClientId, String json) { 
+        WxWorkInterface.INSTANCE.SendData(iClientId, json);
+    }
 
- * 获取内部联系人
-   *
- * @param clientId
-   */
-   public static void getInnerUsers(int clientId, String json) {
-   WxWorkInterface.INSTANCE.SendData(clientId, json);
-   }
+    /**
+     * 发送视频
+     * @param iClientId
+     * @param conversation_id 接收者的会话ID
+     * @param file 文件路径
+     */
+    public static void sendVideo(int iClientId, String jsone) {
+        WxWorkInterface.INSTANCE.SendData(iClientId, json);
+    }
 
-/**
+    /**
+     * 发送文件
+     * @param iClientId
+     * @param conversation_id 接收者的会话ID
+     * @param file 文件路径
+     */
+    public static void sendFile(int iClientId, String json) {
+        WxWorkInterface.INSTANCE.SendData(iClientId, json);
+    }
 
- * 获取外部联系人
-   *
- * @param clientId
-   */
-   public static void getExternalUsers(int clientId, String json) {
-   WxWorkInterface.INSTANCE.SendData(clientId, json);
-   }
+    /**
+     * 发送名片
+     * @param iClientId
+     * @param conversation_id 接收者的会话ID
+     * @param user_id 用户ID
+     */
+    public static void sendPersonCard(int iClientId, String json) {
+        WxWorkInterface.INSTANCE.SendData(iClientId, json);
+    }
 
-/**
+    /**
+     * 通过搜索添加好友
+     * @param iClientId
+     * @param user_id 通过查询获取到的user_id
+     * @param v1 通过查询获取到的v1
+     * @param verify 验证消息
+     */
+    public static void addFriend(int iClientId, String json) {
+        WxWorkInterface.INSTANCE.SendData(iClientId, json);
+    }
 
- * 获取群组列表
-   *
- * @param clientId
-   */
-   public static void getRooms(int clientId, String json) {
-   WxWorkInterface.INSTANCE.SendData(clientId, json);
-   }
-
-/**
-
- * 获取群组列表
- * @param clientId 
-   */
-   public static void getChatRoomMembers(int clientId, String json) {
-   WxWorkInterface.INSTANCE.SendData(clientId, json);
-   }
-
-/**
-
- * 发送文字
- * @param clientId 
- * @param json  
-   */
-   public static void sendText(int clientId, String json) { 
-   Boolean aa = WxWorkInterface.INSTANCE.SendData(clientId, json);
-   }
-
-/**
-
- * 发送图片
- * @param clientId 
- * @param json  
-   */
-   public static void sendImage(int clientId, String json) { 
-   WxWorkInterface.INSTANCE.SendData(clientId, json);
-   } 
-
-/**
-
- * 发送文件
- * @param clientId 
- * @param json  
-   */
-   public static void sendFile(int clientId, String json) {
-   WxWorkInterface.INSTANCE.SendData(clientId, json);
-   }
-
-/**
-
- * 发送名片
- * @param clientId 
- * @param json  
-   */
-   public static void sendCard(int clientId, String json) {
-   WxWorkInterface.INSTANCE.SendData(clientId, json);
-   }
-
-/**
-
- * 通过搜索添加好友
- * @param clientId 
- * @param json  
-   */
-   public static void addFriend(int clientId, String json) {
-   WxWorkInterface.INSTANCE.SendData(clientId, json);
-   } 
-
-/**
-
- * 群成员操作
- * @param clientId 
-   */
-   public static void editRoomMember(int clientId, String json) {       
-   WxWorkInterface.INSTANCE.SendData(clientId, json);
-   }  
-
-public static void main(String[] args) {
-
-    //回调
-    Boolean aBoolean = WxWorkInterface.INSTANCE.InitCallback(connect, recv, close);
-    
-     //载入企业微信
-    int code = WxWorkInterface.INSTANCE.InjectWxWork(WxWorkInterface.libpathstring, "");
-    
-    WxWorkInterface.INSTANCE.sendText(clientId,json);
-
-}
+    /**
+     * 发送小程序
+     * @param iClientId
+     * @param json 先发个小程序给机器人，保存json参数传进来就行了。最后一个type参数固定为 11065
+     */
+    public static void sendApp(int iClientId, String json) {
+        WxWorkInterface.INSTANCE.SendData(iClientId, json);
+    }
