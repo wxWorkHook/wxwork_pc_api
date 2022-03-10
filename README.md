@@ -12,30 +12,51 @@
 java 示例
 
 public final static int 执行结果 = 10002;
+
 public final static int 登录二维码 = 10003;
+
 public final static int 获取内部联系人 = 10103;
+
 public final static int 获取外部联系人 = 10104;
+
 public final static int 获取当前登录帐号的信息 = 11035;
+
 public final static int 手机号查询用户信息 = 10121;
+
 public final static int 通过搜索添加好友 = 10131;
 
 public final static int 获取群组列表 = 10301;
+
 public final static int 获取群组成员列表 = 10302;
+
 public final static int 创建群聊 = 10303;
+
 public final static int 发布群公告 = 10311;
 
 public final static int 接发文本消息 = 10401;
+
 public final static int 接发图片消息 = 10402;
+
 public final static int 接发视频消息 = 10403;
+
 public final static int 接发语音消息 = 10404;
+
 public final static int 接发文件消息 = 10405;
+
 public final static int 接收位置消息 = 10406;
+
 public final static int 发送链接消息 = 10407;
+
 public final static int 接发表情消息 = 10408;
+
 public final static int 接收红包消息 = 10409;
+
 public final static int 接发名片消息 = 10410;
+
 public final static int 发送app消息 = 10411;
+
 public final static int 群内AT人 = 10412;
+
 public final static int 通知消息 = 10499;
 
 /**
