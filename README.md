@@ -7,7 +7,7 @@
 聊天机器人
 通过企业微信远程控制你的设备
 测试可以使用语言有C/C++，C#，易语言，Python, Java, Go, NodeJs, PHP, VB, Delphi。
-支持的版本：3.1.22
+支持的版本：3.1.22 
 
 ## h2功能清单
 
@@ -120,3 +120,7 @@ public final static int 通知消息 = 10499;
     public static void sendApp(int iClientId, String json) {
         WxWorkInterface.INSTANCE.SendData(iClientId, json);
     }
+    
+    
+QQ：1307904544
+verify：wxWork
