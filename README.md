@@ -122,5 +122,5 @@ public final static int 通知消息 = 10499;
     }
     
     
-QQ：1307904544
+QQ：1307904544,
 verify：wxWork
